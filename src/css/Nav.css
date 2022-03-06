@@ -1,0 +1,18 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(20, 14, 2);
+    padding: 10px;
+    font-weight: bold;
+    color:rgb(0, 255, 255)
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+    text-decoration: inherit;
+    color: inherit;
+
+}
