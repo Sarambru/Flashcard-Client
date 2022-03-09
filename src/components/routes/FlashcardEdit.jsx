@@ -6,7 +6,8 @@ import { showFlashcard, updateFlashcard } from '../../api/flashcards'
 
 const FlashcardEdit = ({ user, msgAlert }) => {
   const [title, setTitle] = useState('')
-  const [description, setDescription] = useState('')
+  const [body, setBody] = useState('')
+  const [subject, setSubject] = useState('')
   const [updated, setUpdated] = useState(false)
   const { id } = useParams()
 
@@ -24,7 +25,8 @@ const FlashcardEdit = ({ user, msgAlert }) => {
       try {
         const res = await showFlashcard(id, user)
         setTitle(res.data.flashcard.title)
-        setDescription(res.data.flashcard.description)
+        setBody(res.data.flashcard.body)
+        setSubject(res.data.flashcard.subject)
       } catch (error) {
         msgAlert({
           heading: 'Failed to load flashcard',
@@ -40,7 +42,7 @@ const FlashcardEdit = ({ user, msgAlert }) => {
     event.preventDefault()
 
     try {
-      await updateFlashcard(id, title, description, user)
+      await updateFlashcard(id, title, body, subject, user)
       setUpdated(true)
     } catch (error) {
       msgAlert({
@@ -59,13 +61,15 @@ const FlashcardEdit = ({ user, msgAlert }) => {
   return (
     <div className='row'>
       <div className='col-sm-10 col-md-8 mx-auto mt-5'>
-        <h3>Edit Movie</h3>
+        <h3>Edit Flashcard</h3>
         <FlashcardForm
           handleSubmit={handleSubmit}
           title={title}
-          description={description}
+          body={body}
+          subject={subject}
           setTitle={setTitle}
-          setDirector={setDescription}
+          setBody={setBody}
+          setSubject={setSubject}
         />
       </div>
     </div>

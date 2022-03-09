@@ -18,17 +18,17 @@ export const showFlashcard = (id, user) => {
 }
 
 export const deleteFlashcard = (id, user) => {
-  return axios.delete(`${apiUrl}/flashcards/${id}`, {
+  return axios.delete(`${apiUrl}/flashcards/${id}/`, {
     headers: {
       Authorization: `Bearer ${user.token}`
     }
   })
 }
 
-export const updateFlashcard = (id, title, description, subject, user) => {
+export const updateFlashcard = (id, title, body, subject, user) => {
   return axios.patch(
-    `${apiUrl}/flashcards/${id}`,
-    { flashcard: { title, description, subject } },
+    `${apiUrl}/flashcards/${id}/`,
+    { flashcard: { title, body, subject } },
     {
       headers: {
         Authorization: `Bearer ${user.token}`
@@ -37,10 +37,10 @@ export const updateFlashcard = (id, title, description, subject, user) => {
   )
 }
 
-export const createFlashcard = (title, description, subject, user) => {
+export const createFlashcard = (title, body, subject, user) => {
   return axios.post(
-    `${apiUrl}/flashcards`,
-    { flashcard: { title, description, subject } },
+    `${apiUrl}/flashcards/create/`,
+    { flashcard: { title, body, subject } },
     {
       headers: {
         Authorization: `Bearer ${user.token}`

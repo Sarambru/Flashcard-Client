@@ -7,7 +7,8 @@ import { createFlashcard } from '../../api/flashcards'
 
 const FlashcardCreate = ({ user, msgAlert }) => {
   const [title, setTitle] = useState('')
-  const [description, setDescription] = useState('')
+  const [body, setBody] = useState('')
+  const [subject, setSubject] = useState('')
   const [createdId, setCreatedId] = useState(null)
 
   const handleSubmit = async event => {
@@ -15,7 +16,7 @@ const FlashcardCreate = ({ user, msgAlert }) => {
 
     try {
       const res = await createFlashcard(title, user)
-      setCreatedId(res.data.movie._id)
+      setCreatedId(res.data.flashcard._id)
 
       msgAlert({
         heading: 'Flashcard Created',
@@ -24,7 +25,7 @@ const FlashcardCreate = ({ user, msgAlert }) => {
       })
     } catch (error) {
       msgAlert({
-        heading: 'Failed to create movie',
+        heading: 'Failed to create Flashcard',
         message: error.message,
         variant: 'danger'
       })
@@ -35,19 +36,21 @@ const FlashcardCreate = ({ user, msgAlert }) => {
   if (!user) {
     return <Navigate to='/' />
   } else if (createdId) {
-    // if movie has been created,Navigate to the 'show' page
+    // if flashcard has been created,Navigate to the 'show' page
     return <Navigate to={`/flashcards/${createdId}`} />
   }
   return (
     <div className='row'>
       <div className='col-sm-10 col-md-8 mx-auto mt-5'>
-        <h3>Create Movie</h3>
+        <h3>Create Flashcard</h3>
         <FlashcardForm
           handleSubmit={handleSubmit}
           title={title}
-          description={description}
+          body={body}
+          subject={subject}
           setTitle={setTitle}
-          setDescription={ setDescription }
+          setBody={setBody}
+          setSubject={setSubject}
         />
       </div>
     </div>

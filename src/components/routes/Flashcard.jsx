@@ -63,10 +63,10 @@ const Flashcard = ({ user, msgAlert }) => {
       <div className='row'>
         <div className='col-sm-10 col-md-8 mx-auto mt-5'>
           <h3>{flashcard.title}</h3>
-          <p>Director: {flashcard.director}</p>
+          <p>Description: {flashcard.body}</p>
           <Button variant='danger' onClick={handleDeleteClick}>Delete Flashcard</Button>
           <Link to={`/flashcards/${id}/edit`}>
-            <Button variant='primary' type='submit'>Update Movie</Button>
+            <Button variant='primary' type='submit'>Update Flashcard</Button>
           </Link>
         </div>
       </div>
