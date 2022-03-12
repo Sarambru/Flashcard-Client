@@ -56,12 +56,10 @@ const FlashcardStudy = ({ user, msgAlert }) => {
               {flashcard.title}
             </div>
             <div id='deck-elements'>
-              <div className='show-title'>
-                {flashcard.title}
-              </div>
-              <div className='flip-card-back'>
-                {flashcard.body}
-              </div>
+              {/* {flashcard.title} */}
+            </div>
+            <div className='flip-card-back'>
+              {flashcard.body}
             </div>
           </div>
         </div>

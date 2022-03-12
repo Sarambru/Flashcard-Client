@@ -6,6 +6,7 @@ import { changePasswordSuccess, changePasswordFailure } from '../AutoDismissAler
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import './/..//../css/ChangePassword.scss'
 
 const ChangePassword = ({ msgAlert, user }) => {
   const [oldPassword, setOldPassword] = useState('')
@@ -66,7 +67,7 @@ const ChangePassword = ({ msgAlert, user }) => {
               }
             />
           </Form.Group>
-          <Button className='mt-2' variant='primary' type='submit'>Submit</Button>
+          <Button id='change-password' className='mt-2' variant='primary' type='submit'>Change Password</Button>
         </Form>
       </div>
     </div>

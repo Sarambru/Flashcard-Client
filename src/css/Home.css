@@ -18,3 +18,15 @@ h1,p, h3,label {
 *:not(.container3, .f-label, .form-container ){
     background-color:rgb(0, 16, 31);
 }
+
+#about {
+    margin: 10px;
+    padding: 5px;
+    align-self: center;
+}
+
+#byline {
+    margin: 5px;
+    padding: 5px;
+    align-self: center;
+}

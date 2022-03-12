@@ -1,10 +1,11 @@
+
+
 .flip-card {
     background-color: transparent;
     width: 300px;
     height: 200px;
-    border: 1px solid black;
     perspective: 1000px;
-    color: aqua
+    margin: 10px;
 }
 
 // position front and back
@@ -14,7 +15,10 @@
     height: 100%;
     text-align:center;
     transition: transform .8s;
-    transform-style: preserve-3d
+    transform-style: preserve-3d;
+    color: aqua;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .flip-card:hover .flip-card-inner {
@@ -23,7 +27,7 @@
 
 // position
 
-.flip-card-front, .flip-card-back {
+.flip-card-front, .flip-card-back{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -33,11 +37,20 @@
 
 .flip-card-front{
     background-color: white;
-    color: black;
+    color: rgb(4, 184, 184);
+    text-align: center;
+    font-size: 25px;
+     font-family:'IBM Plex Mono', monospace !important;
+    align-content: center;
+    align-items: center;
+    padding: 5px;
+
 }
 
 .flip-card-back {
     background-color: white;
-    color: black;
-    transform: rotateY(180deg)
+    color: rgb(4, 184, 184);
+    font-family:'IBM Plex Mono', monospace !important;
+    transform: rotateY(180deg);
+
 }
