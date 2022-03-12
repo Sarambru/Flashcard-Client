@@ -6,6 +6,7 @@ import { signInSuccess, signInFailure } from '../AutoDismissAlert/messages'
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import '../../css/SignIn.scss'
 
 const SignIn = ({ msgAlert, setUser }) => {
   const [email, setEmail] = useState('')
