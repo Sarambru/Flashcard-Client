@@ -67,6 +67,7 @@ const App = () => {
           <Route path='flashcards/:id' element={<Flashcard msgAlert={msgAlert} user={user} />} />
           <Route path = '/flashcards/create' element={<FlashcardCreate msgAlert={msgAlert} user={user} />}/>
           <Route path='/flashcards/:id/edit' element={<FlashcardEdit msgAlert={msgAlert} user={user} />} />
+          <Route path='/flashcards/create' element={<FlashcardCreate msgAlert={msgAlert} user={user} />} />
           <Route path='/flashcards/study' element={<FlashcardStudy msgAlert={msgAlert} user={user} />} />
         </Routes>
       </main>

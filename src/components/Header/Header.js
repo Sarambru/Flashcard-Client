@@ -10,6 +10,7 @@ const authenticatedOptions = (
     <NavLink to='/change-password' className='nav-link'>Change Password</NavLink>
     <NavLink to='/sign-out' className='nav-link'>Sign Out</NavLink>
     <NavLink to='/flashcards' className='nav-link'> My Flashcards</NavLink>
+    <NavLink to='/flashcards/create' className='nav-link'> Create Flashcard + </NavLink>
     <NavLink to='/flashcards/study' className='nav-link'>Study</NavLink>
   </>
 )
