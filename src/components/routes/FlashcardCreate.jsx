@@ -4,6 +4,7 @@ import { Navigate } from 'react-router-dom'
 
 import FlashcardForm from '../shared/FlashcardForm'
 import { createFlashcard } from '../../api/flashcards'
+import '..//../css/FlashcardForm.scss'
 
 const FlashcardCreate = ({ user, msgAlert }) => {
   const [title, setTitle] = useState('')
@@ -15,7 +16,7 @@ const FlashcardCreate = ({ user, msgAlert }) => {
     event.preventDefault()
 
     try {
-      const res = await createFlashcard(title, user)
+      const res = await createFlashcard(title, body, subject, user)
       setCreatedId(res.data.flashcard._id)
 
       msgAlert({
@@ -40,11 +41,10 @@ const FlashcardCreate = ({ user, msgAlert }) => {
     return <Navigate to={`/flashcards/${createdId}`} />
   }
   return (
-    <div className='row'>
+    <div className='form-box'>
       <div className='col-sm-10 col-md-8 mx-auto mt-5'>
-        <h3>Create Flashcard</h3>
-        <FlashcardForm
-          handleSubmit={handleSubmit}
+        <h3 id='create-flashcard'>Create Flashcard</h3>
+        <FlashcardForm className='form-box' handleSubmit={handleSubmit}
           title={title}
           body={body}
           subject={subject}

@@ -7,11 +7,9 @@ import '..//../css/Nav.css'
 const Nav = () => (
   <>
     <section className='navbar'>
-      <Link to='/' className='nav-item'>Home</Link>
-      <Link to='flashcards' className='nav-item'>Flashcards</Link>
+      <Link to='flashcards/create' className='nav-Item'>+ Create Flashcard</Link>
       {/* <Link to='projects' className='nav-item'>My Projects</Link> */}
     </section>
-    <hr />
   </>
 )
 

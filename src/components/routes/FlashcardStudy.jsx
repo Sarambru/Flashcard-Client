@@ -1,13 +1,12 @@
-
 import React, { useEffect, useState } from 'react'
-import { Link, Navigate } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 
 import { Spinner } from 'react-bootstrap'
 import { indexFlashcards } from '../../api/flashcards'
-// import '..//../css/FlashcardForm.scss'
-import '..//../css/FlashcardDeck.scss'
+import '..//../css/FlashcardForm.scss'
+import '..//../css/FlashcardStudy.scss'
 
-const Flashcards = ({ user, msgAlert }) => {
+const FlashcardStudy = ({ user, msgAlert }) => {
   const [flashcards, setFlashcards] = useState(null)
 
   // if user is null, redirect to home page
@@ -50,21 +49,31 @@ const Flashcards = ({ user, msgAlert }) => {
   } else {
     // Otherwise, display the movies
     const flashcardsList = flashcards.map(flashcard => (
-      <div className='flashcard-deck'key={flashcard._id}>
-        <Link id='deck-elements' to={`/flashcards/${flashcard._id}`}>{flashcard.title}
-        </Link>
-      </div>
+      <>
+        <div className='flip-card' id='wrapper'key={flashcard._id}>
+          <div className='flip-card-inner'>
+            <div className='flip-card-front'>
+              {flashcard.title}
+            </div>
+            <div id='deck-elements'>
+              <div className='show-title'>
+                {flashcard.title}
+              </div>
+              <div className='flip-card-back'>
+                {flashcard.body}
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
     ))
-
     return (
       <div id='deck-container' className='row'>
-        <div className='col-sm-10 col-md-8 mx-auto mt-5'>
-          <h3 id='deck-title'>Flashcards</h3>
-          <ul id='grid-ul'>{flashcardsList}</ul>
-        </div>
+        <h3>Study</h3>
+        <ul id='grid-ul'>{flashcardsList}</ul>
       </div>
     )
   }
 }
 
-export default Flashcards
+export default FlashcardStudy

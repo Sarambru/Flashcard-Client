@@ -17,6 +17,7 @@ import FlashcardCreate from './components/routes/FlashcardCreate'
 import FlashcardEdit from './components/routes/FlashcardEdit'
 import Flashcards from './components/routes/Flashcards'
 import Nav from './components/routes/Nav'
+import FlashcardStudy from './components/routes/FlashcardStudy'
 
 const App = () => {
   const [user, setUser] = useState(null)
@@ -66,6 +67,7 @@ const App = () => {
           <Route path='flashcards/:id' element={<Flashcard msgAlert={msgAlert} user={user} />} />
           <Route path = '/flashcards/create' element={<FlashcardCreate msgAlert={msgAlert} user={user} />}/>
           <Route path='/flashcards/:id/edit' element={<FlashcardEdit msgAlert={msgAlert} user={user} />} />
+          <Route path='/flashcards/study' element={<FlashcardStudy msgAlert={msgAlert} user={user} />} />
         </Routes>
       </main>
     </>

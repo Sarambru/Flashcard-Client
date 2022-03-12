@@ -1,0 +1,31 @@
+.f-style {
+   background-color: white !important; 
+   height: 300px !important;
+   width: 800px;
+}
+
+#f-title {
+    border: 2px solid black !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#f-style-body {
+    background-color: white;
+    font-size: 20px;
+    margin: 5px;
+    margin-top: 20px;
+}
+
+#delete-button {
+    margin: 5px;
+    background: rgb(122, 8, 8);
+}
+
+#edit-button {
+    margin-left: 599px;
+}

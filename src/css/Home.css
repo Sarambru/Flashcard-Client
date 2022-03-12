@@ -1,0 +1,20 @@
+img {
+    display: flex;
+    height: 300px;
+    width: 300px;
+   
+}
+
+/* .container {
+    background-color:  rgb(0, 16, 31);
+    margin: 10px;
+} */
+
+h1,p, h3,label {
+    color:aqua !important;
+    font-family:'IBM Plex Mono', monospace !important;
+}
+
+*:not(.container3, .f-label, .form-container ){
+    background-color:rgb(0, 16, 31);
+}

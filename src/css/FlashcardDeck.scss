@@ -1,0 +1,51 @@
+
+.flashcard-deck {
+    background-color: white;
+    height: 200px !important;
+    width: 200px;
+    color: rgba(0, 255, 255, 0.295) !important;
+    text-align: center;
+    display: flex;
+    // border: black 20px !important;
+    margin: 5px;
+    align-items: center;
+}
+
+
+#deck-elements {
+    background-color: white;
+    display: inline;
+    color: rgba(12, 82, 82, 0.37) !important;
+    text-align: center;
+    margin:5px;
+    // border: black solid 5px;
+    
+}
+a#deck-elements {
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    display: inline;
+    color: rgba(4, 77, 87, 0.664) !important;
+    font-family:'IBM Plex Mono', monospace !important;
+    font-weight: bold;
+
+   
+
+}
+
+ul {
+    background-color: rgb(0, 16, 31) !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 800px;
+}
+
+#deck-title {
+ color: aqua !important;
+ font-family:'IBM Plex Mono', monospace !important;
+
+
+
+}

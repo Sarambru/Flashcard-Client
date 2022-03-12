@@ -3,6 +3,8 @@ import { Link, Navigate, useParams } from 'react-router-dom'
 import { Spinner, Button } from 'react-bootstrap'
 
 import { deleteFlashcard, showFlashcard } from '../../api/flashcards'
+// import '..//../css/FlashcardForm.scss'
+import '..//../css/Flashcard.scss'
 
 const Flashcard = ({ user, msgAlert }) => {
   const [flashcard, setFlashcard] = useState(null)
@@ -62,11 +64,13 @@ const Flashcard = ({ user, msgAlert }) => {
     return (
       <div className='row'>
         <div className='col-sm-10 col-md-8 mx-auto mt-5'>
-          <h3>{flashcard.title}</h3>
-          <p>Description: {flashcard.body}</p>
-          <Button variant='danger' onClick={handleDeleteClick}>Delete Flashcard</Button>
+          <div className='f-style'>
+            <h3 id='f-title'>{flashcard.title}</h3>
+            <p id='f-style-body'>{flashcard.body}</p>
+          </div>
+          <Button id='delete-button' variant='danger' onClick={handleDeleteClick}>Delete</Button>
           <Link to={`/flashcards/${id}/edit`}>
-            <Button variant='primary' type='submit'>Update Flashcard</Button>
+            <Button id='edit-button' variant='primary' type='submit'>Edit</Button>
           </Link>
         </div>
       </div>
