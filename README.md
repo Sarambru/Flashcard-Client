@@ -1,16 +1,16 @@
-Deployed Site:
-![deployed site] (https://sarambru.github.io/Flashcard-Client/)
-![deployed express serve] (https://pure-reef-42628.herokuapp.com/ )
 
-WireFrame: 
+Studium is a flashcard app that allows users to create and study their own flashcards. 
 
-![wireframe] (https://docs.google.com/presentation/d/1SZfV2ROcyzpptTdPFad_WHqUL84bRRWEeTxKx6Fo4IU/edit#slide=id.g117fdf43f93_0_0)
 
-Back-end Repository:
+## Important Links ✨
+[Deployed Site](https://sarambru.github.io/Flashcard-Client/)
+[Deployed Express Server](https://pure-reef-42628.herokuapp.com/)
 
-![Repository](https://github.com/Sarambru/Flashcard-Project)
+[Wireframe](https://docs.google.com/presentation/d/1SZfV2ROcyzpptTdPFad_WHqUL84bRRWEeTxKx6Fo4IU/edit#slide=id.g117fdf43f93_0_0)
 
-Studium is a flashcard app that allows users to study and create their own flashcards. 
+
+[Back-end Repo](https://github.com/Sarambru/Flashcard-Project)
+
 
 Technologies Used:
 
