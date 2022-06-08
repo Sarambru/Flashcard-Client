@@ -3,13 +3,14 @@ Studium is a flashcard app that allows users to create and study their own flash
 
 
 ## Important Links ✨
-[Deployed Site](https://sarambru.github.io/Flashcard-Client/)
-[Deployed Express Server](https://pure-reef-42628.herokuapp.com/)
+👉 [Deployed Site](https://sarambru.github.io/Flashcard-Client/) 👈
 
-[Wireframe](https://docs.google.com/presentation/d/1SZfV2ROcyzpptTdPFad_WHqUL84bRRWEeTxKx6Fo4IU/edit#slide=id.g117fdf43f93_0_0)
+[Express Server](https://pure-reef-42628.herokuapp.com/)
+
+[Project Wireframe](https://docs.google.com/presentation/d/1SZfV2ROcyzpptTdPFad_WHqUL84bRRWEeTxKx6Fo4IU/edit#slide=id.g117fdf43f93_0_0)
 
 
-[Back-end Repo](https://github.com/Sarambru/Flashcard-Project)
+[Back-End Repo](https://github.com/Sarambru/Flashcard-Project)
 
 
 Technologies Used:
